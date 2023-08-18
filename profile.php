@@ -81,12 +81,12 @@ if (!$result) {
 }
     </style>
 
-<div class="container">
-<h2>Welcome to your profile</h2>
-    <p>Email: <?php echo $_SESSION['email']; ?></p>
-
+<div class="card">
+    <div class="card-body">
+        <h2 class="text-center px-3">welcome to your profile</h2>
+        <p class="card-text text-center px-3">Email: <?php echo $_SESSION['email']; ?></p>
+    </div>
 </div>
-
 
 
 
