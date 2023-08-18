@@ -1,4 +1,14 @@
 
+<?php
+session_start();
+
+
+        if (isset($_SESSION['signup_error'])) {
+            echo '<p class="text-danger text-center pt-2">' . $_SESSION['signup_error'] . '</p>';
+            unset($_SESSION['signup_error']);
+        }
+        ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -11,26 +21,15 @@
 </head>
 <body>
     <div class="container-fluid px-1 py-5 mx-auto">
+
+
+    <div class="container">
+      
     <div class="row d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
             <div class="card">
                 <h5 class="text-center mb-4">Welcome, signup</h5>
                 <form class="form-card"  action="signupUser.php" method="POST">
-                    <!-- <div class="row justify-content-center text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="name" name="username" placeholder="Enter your  name" onblur="validate(1)"> </div>
-                    </div>
-                    <div class="row justify-content-center text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="Enter your email" onblur="validate(2)"> </div>
-                    </div>
-                    <div class="row justify-content-center text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">password<span class="text-danger"> *</span></label> <input type="text" id="password" name="password" placeholder="Enter your password" onblur="validate(2)"> </div>
-                    </div>
-                  
-                    <div class="row justify-content-center">
-                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">signup</button> </div>
-
-                    </div> -->
-
 
 
 

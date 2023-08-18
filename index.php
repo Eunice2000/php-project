@@ -1,5 +1,15 @@
 
 
+<?php
+session_start();
+
+
+        if (isset(   $_SESSION['login_error'])) {
+            echo '<p class="text-danger text-center pt-2">' .   $_SESSION['login_error'] . '</p>';
+            unset(   $_SESSION['login_error']);
+        }
+        ?>
+
 <!DOCTYPE html>
 <html>
 <head>
